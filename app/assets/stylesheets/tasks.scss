@@ -1,3 +1,102 @@
 // Place all the styles related to the tasks controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: https://sass-lang.com/
+body {
+  padding: 2rem;
+}
+
+h1 {
+  font-size: 3rem;
+  font-family: sans-serif;
+}
+
+input[type=checkbox] {
+  width: 15px;
+  height: 15px;
+}
+
+input[type=text] {
+  font-size: 2rem;
+  padding: 8px;
+  border-radius: 8px;
+
+  &:focus {
+    outline: none;
+  }
+}
+
+input[type=submit] {
+  margin: 2rem 0;
+  background-color: rgb(0, 0, 75);
+  color: white;
+  font-size: 1.3rem;
+  border: none;
+  box-shadow: none;
+  border-radius: 4px;
+  padding: 10px;
+  transition: background-color ease 0.2s;
+
+  &:hover {
+    background-color: cornflowerblue;
+    cursor: pointer;
+  }
+}
+
+label {
+  font-size: 1.5rem;
+  display: inline-block;
+  margin-top: 1rem;
+  font-family: sans-serif;
+  
+  a {
+    text-decoration: none;
+    transition: color ease 0.2s;
+
+    &:hover{
+      color:cornflowerblue;
+    }
+  }
+}
+
+.wrapper {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  width: 150px;
+
+  a {
+    text-decoration: none;
+    font-family: sans-serif;
+    font-size: 1.2rem;
+    color: #777777;
+  }
+
+  svg g {
+    fill: #777777;
+  }
+
+  &:hover {
+    a {
+      color: black;
+    }
+
+    svg g{
+      fill: black;
+    }
+  }
+}
+
+.task-description {
+  display: block;
+  width: 40%;
+  border: 1px solid black;
+  border-radius: 8px;
+  background-color: lightgray;
+  padding: 2rem 1rem;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-size: 1.3rem;
+}
+
+.trash:hover svg path {
+  fill: red;
+}
