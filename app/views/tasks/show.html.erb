@@ -1,0 +1,11 @@
+<h1><%= @task.title %></h1>
+<p class="task-description"><%= @task.details %></p>
+<% if @task.completed %>
+  <input type="checkbox" name="<%= @task.title.downcase =%>" checked>
+  <label for="<%= @task.title.downcase %>">This task is completed</label>
+<% else %>
+  <input type="checkbox" name="<%= @task.title.downcase =%>">
+  <label for="<%= @task.title.downcase %>">This task is not completed yet</label>
+<% end %>
+<hr>
+<br><%= link_to 'Back to List', index_path %>
